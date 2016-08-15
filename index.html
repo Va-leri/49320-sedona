@@ -8,20 +8,18 @@
 		<header class="page-header">
 			<div class="container">
 				<nav class="main-navigation">
+					<a href="/index.html">
+						<img src="img/logo.png" alt="City of Sedona">
+					</a>
 					<ul>
 						<li>
-							<a href="/information">
+							<a href="#">
 								Информация
 							</a>
 						</li>
 						<li>
 							<a href="/photo-and-video">
 								Фото и видео
-							</a>
-						</li>
-						<li>
-							<a href="/index.html">
-								<img src="img/logo.png" alt="City of Sedona">
 							</a>
 						</li>
 						<li>
@@ -43,9 +41,7 @@
 				<img src="img/welcome.png" alt="Welcome to the gorgeous Sedona">
 			</div>
 			<p class="lead">
-				<b>
-					Седона - небольшой городок в Аризоне заслуживающий большего!
-				</b>
+				Седона - небольшой городок в Аризоне заслуживающий большего!
 			</p>
 			<section class="features">
 				<p>
@@ -53,60 +49,54 @@
 				</p>
 				<div>
 					<div class="content-left features-item">
-						<b class="features-name">Настоящий городок</b>
+						<p class="features-name">Настоящий городок</p>
 						<p> - №1 - </p>
 						<p class="features-description">Седона - не аттракцион для туристов, там течет своя жизнь</p>
 					</div>
 					<div class="content-right features-photo">
-						<img class="index-photo" src="img/town.jpg" alt="Sedona">
+						<!--Фоновое изображение - фото Sedona-city.jpg-->
 					</div>
 				</div>
 				<div>
 					<div class="features-item">
-						<div class="features-image">
-							<img src="img/house.png" alt="house">
-						</div>
-						<b class="features-name">Жилье</b>
+						<!--Фоновое изображение -house.png-->
+						<p class="features-name">Жилье</p>
 						<p class="features-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 					</div>
 					<div class="features-item">
-						<div class="features-image">
-							<img src="img/food.png" alt="food">
-						</div>
-						<b class="features-name">Еда</b>
+						<!--Фоновое изображение -food.png-->
+						<p class="features-name">Еда</p>
 						<p class="features-description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
 					</div>
 					<div class="features-item">
-						<div class="features-image">
-							<img src="img/souvenirs.png" alt="souvenirs">
-						</div>
-						<b class="features-name">Сувениры</b>
+						<!--Фоновое изображение - souvenirs.png-->
+						<p class="features-name">Сувениры</p>
 						<p class="features-description">Не только китайского, но и местного производства!</p>
 					</div>
 				</div>
 				<div>
 					<div class="content-left features-photo">
-						<img class="index-photo" src="img/bridge.jpg" alt="Devil's bridge">
+						<!--Фоновое изображение - фото Devil's-bridge.jpg-->
 					</div>
 					<div class="content-right features-item">
-						<b class="features-name">Там есть мост дьявола</b>
+						<p class="features-name">Там есть мост дьявола</p>
 						<p> - №2 - </p>
 						<p class="features-description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 					</div>
 				</div>
 				<div>
 					<div class="features-item">
-						<b class="features-name">Небольшая площадь</b>
+						<p class="features-name">Небольшая площадь</p>
 						<p> - №3 - </p>
 						<p class="features-description">Все достопримечательности находятся очень близко</p>
 					</div>
 					<div class="features-item">
-						<b class="features-name">Красивая дорога</b>
+						<p class="features-name">Красивая дорога</p>
 						<p> - №4 - </p>
 						<p class="features-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 					</div>
 					<div class="features-item">
-						<b class="features-name">Мало туристов</b>
+						<p class="features-name">Мало туристов</p>
 						<p> - №5 - </p>
 						<p class="features-description">Большинство едет в Гранд-Каньон и толпится там</p>
 					</div>
@@ -133,10 +123,18 @@
 							<input type="date" value="2016-07-04" name="checkout">
 						</label>
 						<label>Взрослые:
-							<input type="number" value="2" name="adults">
+							<div class="visitors">
+								<button>+</button>
+								<input type="number" value="2" name="adults">
+								<button>-</button>
+							</div>
 						</label>
 						<label>Дети:
-							<input type="number" value="0" name="children">
+							<div class="visitors">
+								<button>+</button>
+								<input type="number" value="2" name="children">
+								<button>-</button>
+							</div>
 						</label>
 						<button type="submit">Найти</button>
 					</form>
@@ -149,15 +147,9 @@
 			<div class="container">
 				<section class="hashtag">#visitsedona</section>
 				<section class="social">
-					<a class="social-btn social-btn-tw" href="#">
-						<img src="img/twitter.png" alt="Twitter">
-					</a>
-					<a class="social-btn social-btn-fb" href="#">
-						<img src="img/facebook.png" alt="Facebook">
-					</a>
-					<a class="social-btn social-btn-utube" href="#">
-						<img src="img/youtube.png" alt="Youtube">				
-					</a>					
+					<a class="social-btn social-btn-tw" href="#">Twitter</a>
+					<a class="social-btn social-btn-fb" href="#">Facebook</a>
+					<a class="social-btn social-btn-utube" href="#">Youtube</a>					
 				</section>
 				<section class="developer">
 					Website by
