@@ -8,8 +8,8 @@
 	</head>
 	<body>
 		<div class="container">
-			<header class="page-header clearfix">
-				<nav class="main-navigation">
+			<header class="page-header">
+				<nav class="main-navigation clearfix">
 					<ul class="main-navigation-left">
 						<li>
 							<a href="#">
@@ -34,7 +34,7 @@
 							</a>
 						</li>	
 					</ul>	
-					<a href="/index.html">
+					<a class="logo" href="/index.html">
 						<img src="img/logo.png" alt="City of Sedona" width="138px" height="70px">
 					</a>
 				</nav>
@@ -44,7 +44,7 @@
 					<img src="img/welcome.png" alt="Welcome to the gorgeous Sedona" width="458px" height="352px">
 				</div>
 				<p class="lead">
-					Седона - небольшой городок в Аризоне, заслуживающий большего!
+					Седона - небольшой городок в Аризоне,<br> заслуживающий большего!
 				</p>
 				<section class="features">
 					<p>
@@ -56,9 +56,7 @@
 							<p> - №1 - </p>
 							<p class="features-description">Седона - не аттракцион для туристов, там течет своя жизнь</p>
 						</div>
-						<div class="content-right features-photo">
-							<!--Фоновое изображение - фото Sedona-city.jpg-->
-						</div>
+						<!--Фоновое изображение - фото Sedona-city.jpg-->
 					</div>
 					<div class="advice clearfix">
 						<div class="features-item">
@@ -78,9 +76,7 @@
 						</div>
 					</div>
 					<div class="clearfix features-2">
-						<div class="features-photo">
-							<!--Фоновое изображение - фото Devil's-bridge.jpg-->
-						</div>
+						<!--Фоновое изображение - фото Devil's-bridge.jpg-->
 						<div class="content-right features-item">
 							<p class="features-name">Там есть мост дьявола</p>
 							<p> - №2 - </p>
@@ -105,7 +101,7 @@
 						</div>
 					</div>
 				</section>
-				<div class="order">
+				<div class="index-search">
 					<p>
 						<b>
 							Заинтересовались?
@@ -114,11 +110,10 @@
 					<p>
 						Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне
 					</p>
-					<button type="button">
+					<a>
 						Поиск гостиницы в Седоне	
-					</button>
-				</div>
-				<div class="search-form">
+					</a>
+					<div class="index-search-form">
 						<form action="#" class="search-details">
 							<label>Дата заезда:
 								<input type="date" value="2016-04-24" name="checkin">
@@ -143,8 +138,9 @@
 							<button type="submit">Найти</button>
 						</form>
 					</div>
+				</div>
 				<article class="background-map">
-						<img src="img/map.jpg" width="1200px" height="593px">
+<!-- Фоновое изображение - карта <img src="img/map.jpg" width="1200px" height="593px">-->
 				</article>
 			</main>
 			<footer class="page-footer clearfix">

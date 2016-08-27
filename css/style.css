@@ -1,3 +1,4 @@
+/*Общие стили*/
 body {
 	font-size: 14px;
 	line-height: 21px;
@@ -44,39 +45,75 @@ b {
 	clear: both;
 }
 
+.content-left {
+	float: left;
+}
+.content-right {
+	float: right;
+}
+
 .page-header {
-	height: 56px;
+	position: relative;
 	outline: blue solid 1px;
 }
 
 .main-navigation {
-	padding: 0 6%;
-	
+	min-height: 56px;
 }
+
 .main-navigation-left {
 	float: left;
 	width: 40%;
-	box-sizing: border-box;
 	padding: 0;
 }
 .main-navigation-right {
 	float: right;
 	width: 40%;
-	box-sizing: border-box;
 	padding: 0;
 }
 .main-navigation-left li{
+	box-sizing: border-box;
 	float: left;
-	outline: blue solid 1px;
 	width: 50%;
+	padding-left: 15%;
+	outline: blue solid 1px;
 }
 
 .main-navigation-right li{
+	box-sizing: border-box;
 	float: right;
-	outline: blue solid 1px;
 	width: 50%;
+	padding-right: 15%;
+	outline: blue solid 1px;
 }
 
+.logo {
+/*	float:left;*/
+	position: absolute;
+	width: 20%;
+	text-align: center;
+}
+
+.page-footer {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	background: #ffffff;
+	opacity: 0.9;
+	outline: blue solid 1px;
+}
+
+.footer-item {
+	float: left;
+	width: 33.33333%;
+	box-sizing: border-box;
+	padding-left: 6%;
+	padding-right: 6%;
+	min-height: 120px;
+	outline: blue solid 1px;
+}
+
+/*Стили для главной страницы index.html*/
 .welcome-image {
 	padding-top: 62px;
 	background: #b8d0e0;
@@ -88,19 +125,20 @@ b {
 }
 
 .lead {
-	max-width: 444px;
+/*	max-width: 444px;*/
 	margin: 0 auto;
 	margin-bottom: 35px;
-	padding: 0 5px;
+	padding: 0 6%;
 	outline: blue solid 1px;
+	text-align: center;
 }
 
 .features>p {
-	max-width: 490px;
+/*	max-width: 490px;*/
 	margin: 0 auto;
 	margin-bottom: 55px;
-	padding: 0 5px;
-	
+	padding: 0 6%;
+	text-align: center;
 }
 
 .features-1 {
@@ -119,10 +157,6 @@ b {
 	padding-left: 6%;
 	padding-right: 6%;
 	outline: blue solid 1px;
-}
-
-.content-right {
-	float: right;
 }
 
 .advice .features-item {
@@ -150,51 +184,103 @@ b {
 	padding-top: 45px;
 }
 
-.order {
+.index-search {
 	box-sizing: border-box;
 	width: 568px;
-	outline: blue solid 1px;
 	margin: 0 auto;
 	padding-top: 55px;
+	outline: blue solid 1px;
 }
 
-.order button {
+.index-search a {
+	display: block;
 	width: 100%;
 	height: 85px;
 	margin-top: 55px;
+	outline: blue solid 1px;
 }
 
-.search-form {
-	display: none;
+.index-search-form {
+/*	display: none;*/
+	position: absolute;
+	z-index: 2;
 	box-sizing: border-box;
 	width: 568px;
-	outline: blue solid 1px;
+	height: 400px;
 	margin: 0 auto;
 	padding: 55px;
+	background: #ffffff;
+	outline: blue solid 1px;
 }
-.search-form button[type="submit"] {
+.index-search-form button[type="submit"] {
 	width: 458px;
 	height: 58px;
 }
 .background-map {
 	position: relative;
+	z-index: 1;
 	width: 100%;
-}
-.page-footer {
-	position: relative;
-	width: 100%;
-	margin-top: -120px;
-	background: #ffffff;
-	opacity: 0.9;
+	height: 593px;
+	background: #cbdda9;
+	margin-bottom: -120px;
 	outline: blue solid 1px;
 }
 
-.footer-item {
+/*Стили для catalog.html*/
+.hotels-search {
+	padding: 15px 6%;
+	max-height: 562px;
+	background: #7497ba;
+	color: #ffffff;
+}
+.hotels-search-category {
 	float: left;
-	width: 33.33333%;
-	box-sizing: border-box;
-	padding-left: 6%;
-	padding-right: 6%;
-	min-height: 120px;
+	min-height: 156px;
+	margin-right: 9%;
+		
+}
+.hotels-search-category:last-child {
+	float: right;
+	width: 224px;
+	margin-right: 0;
+}
+
+.search-results-header, .hotels-item {
+	padding: 30px 6%;
 	outline: blue solid 1px;
 }
+
+.search-results-header h2,
+.hotels-item .hotel-photo {
+	float: left;
+	width: 135px;
+	margin: 0;
+	margin-right: 30px;
+	outline: blue solid 1px;
+}
+
+.search-results-header *  {
+	float: left;
+}
+.search-results-header .sort {
+	margin-right: 40px;
+}
+.search-results-header .sort-order {
+	float: right;
+	outline: blue solid 1px;
+}
+.search-results-header ul {
+	margin: 0;
+	padding: 0;
+	outline: blue solid 1px;
+}
+.hotel-review {
+	float: left;
+	outline: blue solid 1px;
+}
+.hotel-level {
+	float: right;
+	outline: blue solid 1px;
+}
+
+
