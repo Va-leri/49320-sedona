@@ -12,10 +12,6 @@ body {
 	background-color: #f2f2f2;
 }
 
-h1 {
-	
-}
-
 h2, .lead, .features-name {
 	margin-top: 0;
 	
@@ -32,6 +28,10 @@ b {
 	color: #000000;
 /*	margin-top: 0;*/
 } 
+
+a, button {
+	cursor: pointer;
+}
 
 .container {
 	margin: 0 auto;
@@ -58,16 +58,10 @@ b {
 	position: relative;
 	
 	color: #766357;
-/*	outline: blue solid 1px;*/
-}
-
-.main-navigation {
-/*	min-height: 56px;*/
 }
 
 .main-navigation-left {
 	float: left;
-	
 	width: 40%;
 	margin: 0;
 	padding: 0;
@@ -76,7 +70,6 @@ b {
 }
 .main-navigation-right {
 	float: right;
-	
 	width: 40%;
 	margin: 0;
 	padding: 0;
@@ -85,7 +78,6 @@ b {
 }
 .main-navigation-left li{
 	float: left;
-	
 	box-sizing: border-box;
 	width: 50%;
 	padding-top: 18px;
@@ -93,7 +85,6 @@ b {
 	padding-left: 15%;
 	
 	text-align: left;
-/*	outline: blue solid 1px;*/
 }
 
 .main-navigation-right li{
@@ -105,7 +96,6 @@ b {
 	padding-right: 15%;
 	
 	text-align: right;
-/*	outline: blue solid 1px;*/
 }
 
 .main-navigation a {
@@ -144,38 +134,46 @@ b {
 	left: 50%;
 	top: 0;
 	transform: translate(-69px);
-/*	width: 20%;*/
-/*	text-align: center;*/
 }
 
 .page-footer {
 	width: 100%;
+	padding-top: 36px;
+	padding-bottom: 36px;
+	
 	background: #ffffff;
 	opacity: 0.9;
 	color: #000000;
-/*	outline: blue solid 1px;*/
 }
 
 .footer-item {
-	float: left;
 	width: 33.33333%;
 	box-sizing: border-box;
-	padding-left: 6%;
-	padding-right: 6%;
-	min-height: 120px;
-/*	outline: blue solid 1px;*/
+	padding-left: 4%;
+	padding-right: 4%;
+}
+
+.page-footer .hashtag {
+	float: left;
+	margin: 0 auto;
+}
+
+.page-footer .social {
+	margin: 0 auto;
+}
+
+.page-footer .developer {
+	float: right;
 }
 
 .footer-item h2 {
-	margin-top: 46px;
+	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 }
 
 .social {
-	padding-top: 36px;
-	
 	text-align: center;
 	font-size: 0;
 }
@@ -196,6 +194,7 @@ b {
 }
 
 .social-btn::after {
+	content: "";
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -205,7 +204,7 @@ b {
 
 .social-btn-tw::after {
 	width: 17px;
-    height: 15px;
+	 height: 15px;
 	background-position: -866px -2px;
 	margin-left: -8px;
 	margin-top: -7px;
@@ -213,16 +212,16 @@ b {
 
 .social-btn-fb::after {
 	width: 10px;
-    height: 19px;
-    background-position: -434px -2px;
+	 height: 19px;
+	 background-position: -434px -2px;
 	margin-left: -5px;
 	margin-top: -11px;
 }
 
 .social-btn-utube::after {
 	width: 20px;
-    height: 16px;
-    background-position: -887px -2px;
+	 height: 16px;
+	 background-position: -887px -2px;
 	margin-left: -10px;
 	margin-top: -8px;
 }
@@ -240,35 +239,36 @@ b {
 }
 
 .developer {
-	padding-top: 39px;
-	padding-left: 102px;
-/*	line-height: 39px;*/
-	text-align: left;
+	min-width: 260px;
+	margin-top: 3px;
+	
+	text-align: center;
 }
 
 .developer a {
 	display: inline-block;
-	vertical-align: middle;
+	
 	width: 114px;
-    height: 40px;
+	height: 40px;
 	margin-top:1px;
 	margin-left: 4px;
 	padding-top: 1px;
 	padding-left: 1px;
 	
 	font-size: 0;
+	vertical-align: middle;
 }
 
 .developer a:hover {
 	background-image: url("../img/spritesheet.png");
 	background-repeat: no-repeat;
-    background-position: -235px -1px;;
+	background-position: -235px -1px;;
 }
 
 .developer a:active {
 	background-image: url("../img/spritesheet.png");
 	background-repeat: no-repeat;
-    background-position: -118px -1px;;
+	background-position: -118px -1px;;
 }
 
 .developer img:hover {
@@ -276,24 +276,41 @@ b {
 	margin: 0;
 }
 
+
+
 /*Стили для главной страницы index.html*/
+
 .welcome-block {
 	box-sizing: border-box;
 	min-height: 508px;
+	margin-bottom: 60px;
 	padding-top: 76px;
-	background: #b8d0e0 url(../img/bg-index.jpg);
+	background: #b8d0e0;
+	background-image: url(../img/bg-index.jpg);
 	background-position: center -56px;
 }
+
+.welcome-block::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 57px;
+	background: url(../img/welcome-shape.png);
+	background-position: center bottom;
+	background-size: 100% 57px;
+	border-bottom: 1px solid #ffffff;
+}
+
 .welcome-block img {
 	display: block;
 	margin: 0 auto;
-	margin-bottom: 60px;
+	margin-bottom: 22px;
 }
 
 .lead {
 /*	max-width: 444px;*/
 	margin: 0 auto;
-	margin-bottom: 30px;
+	margin-bottom: 27px;
 	padding: 0 6%;
 	
 	text-align: center;
@@ -303,7 +320,7 @@ b {
 .features>p {
 /*	max-width: 490px;*/
 	margin: 0 auto;
-	margin-bottom: 50px;
+	margin-bottom: 51px;
 	padding: 0 6%;
 	
 	line-height: 26px;
@@ -324,14 +341,14 @@ b {
 	max-width: 285px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 21px;
+	margin-bottom: 20px;
 	
 	text-align: center;
 }
 
 .features-item .features-name {
 	max-width: 160px;
-	margin-bottom: 27px;
+	margin-bottom: 25px;
 	margin-left: auto;
 	margin-right: auto;
 	
@@ -366,9 +383,16 @@ b {
 .features-advice .features-item {
 	position: relative;
 	
+	padding-left: 4.7%;
+	padding-right: 4.7%;
 	padding-top: 161px;
-	padding-bottom: 42px;
+	/*	padding-bottom: 42px;*/
 	min-height: 330px;
+}
+
+.features-advice .house {
+	padding-left: 6%;
+	padding-right: 6%;
 }
 
 .features-advice .features-name::before {
@@ -376,30 +400,30 @@ b {
 	position: absolute;
 	left: 50%;
 	background-image: url(../img/spritesheet.png);
-    background-repeat: no-repeat;
-    display: block;
+	 background-repeat: no-repeat;
+	 display: block;
 	transform: translateX(-50%);
 }
 
 .house .features-name::before {
 	top: 61px;
 	width: 75px;
-    height: 72px;
+	height: 72px;
 	background-position: -526px -2px;
 }
 
 .food .features-name::before {
 	top: 62px;
 	width: 74px;
-    height: 71px;
-    background-position: -448px -2px;
+	 height: 71px;
+	 background-position: -448px -2px;
 }
 
 .souvenirs .features-name::before {
 	top: 57px;
 	width: 65px;
-    height: 77px;
-    background-position: -636px -2px;
+	height: 77px;
+	background-position: -636px -2px;
 }
 
 .features .bridge {
@@ -420,7 +444,8 @@ b {
 	box-sizing: border-box;
 	min-height: 256px;
 	padding-top: 48px;
-	padding-bottom: 37px;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .index-search {
@@ -428,7 +453,6 @@ b {
 	width: 568px;
 	margin: 0 auto;
 	padding-top: 26px;
-/*	outline: blue solid 1px;*/
 }
 
 .index-search p.index-search-heading {
@@ -468,7 +492,7 @@ b {
 }
 
 .index-search-form {
-	display: none;
+/*	display: none;*/
 	position: absolute;
 	z-index: 2;
 	box-sizing: border-box;
@@ -477,17 +501,166 @@ b {
 	margin: 0 auto;
 	padding: 55px;
 	background: #ffffff;
-	outline: blue solid 1px;
+	box-shadow: 0 7px 15px rgba(0,1,1,0.15);
+/*	outline: blue solid 1px;*/
+	
+	font-size: 0;
+	font-weight: bold;
+	line-height: 38px;
 }
-.index-search-form button[type="submit"] {
-	width: 458px;
-	height: 58px;
-	margin-top: 54px;
+
+.index-search-form div {
+	position: relative;
+	margin-bottom: 29px;
+}
+
+.index-search-form label {
+	float: left;
+	width: 100%;
+	
+	font-size: 14px;
+	text-align: left;
 }
 
 .index-search-form input {
-/*	display: inline-block;*/
-/*	margin-bottom: 29px;*/
+	float: right;
+	height: 38px;
+	box-sizing: border-box;
+	
+	outline: none;
+	border: none;
+	background: #f2f2f2;
+}
+
+.index-search-form button[name="calendar"] {
+	position: absolute;
+	top: 8px;
+	right: 9px;
+	
+	width: 21px;
+	height: 22px;
+		
+	border: none;
+	outline: none;
+	background: #f2f2f2 url(../img/spritesheet.png);
+	background-position: -353px -2px;
+}
+
+.index-search-form button[name="calendar"]:hover {
+	background-position: -353px -51px;
+}
+
+.index-search-form button[name="calendar"]:active {
+	background-position: -353px -26px;
+}
+
+.index-search-form input[name="checkin"],
+.index-search-form input[name="checkout"] {
+	width: 346px;
+	
+	padding-left: 15px;
+	padding-right: 10px;
+}
+
+.index-search-form input[name="checkin"]:hover,
+.index-search-form input[name="checkout"]:hover {
+	background: #ebebeb;
+}
+
+.index-search-form input[name="checkin"]:focus,
+.index-search-form input[name="checkout"]:focus {
+	background: #ffffff;
+	border: 2px solid #e5e5e5;
+}
+
+.index-search-form input[name="children"],
+.index-search-form input[name="adults"] {
+	width: 114px;
+
+	text-align: center;
+}
+
+.index-search-form .adults {
+	float: left;
+	width: 227px;
+}
+
+.index-search-form .children {
+	float: right;
+	width: 180px;
+}
+
+.index-search-form button[name="plus"],
+.index-search-form button[name="minus"] {
+	position: absolute;
+	
+	font-size: 0;
+	
+	border: none;
+	outline: none;
+	background: url(../img/spritesheet.png);
+}
+
+.index-search-form button[name="plus"] {
+	top: 50%;
+	right: 13px;
+	transform: translateY(-50%);
+	
+	width: 13px;
+	height: 13px;
+	
+	background-position: -620px -1px;
+}
+
+.index-search-form button[name="plus"]:hover {
+	background-position: -620px -27px;
+}
+
+.index-search-form button[name="plus"]:active {
+	background-position: -620px -14px;
+}
+
+.index-search-form button[name="minus"] {
+	top: 50%;
+	right: 88px;
+	transform: translateY(-50%);
+	
+	width: 13px;
+	height: 5px;
+	
+	background-position: -605px -1px;
+}
+
+.index-search-form button[name="minus"]:hover {
+	background-position: -605px -11px;
+}
+
+.index-search-form button[name="minus"]:active {
+	background-position: -605px -6px;
+}
+
+.index-search-form button[type="submit"] {
+	width: 458px;
+	height: 58px;
+	margin-top: 26px;
+	
+	font-weight: bold;
+	font-size: 21px;
+	text-transform: uppercase;
+	
+	color: #ffffff;
+	background: #81b3d2;
+	border: none;
+	outline: none;
+}
+
+.index-search-form button[type="submit"]:hover {
+	background: #669ec0;
+}
+
+.index-search-form button[type="submit"]:active {
+	background: #5496bd;
+	color: rgba(255, 255, 255, 0.3);
 }
 
 .background-map {
@@ -519,10 +692,15 @@ b {
 
 .hotels-search fieldset {
 	margin: 0;
-	margin-right: 106px;
 	padding: 0;
 	
 	border: none;
+}
+
+.hotels-search fieldset:first-child {
+	margin-right: 46px;
+	min-width: 193px;
+	width: 20%;
 }
 
 .hotels-search legend {
@@ -536,7 +714,6 @@ b {
 .hotels-search-category {
 	float: left;
 	min-height: 156px;
-	margin-right: 9%;
 }
 
 .hotels-search .checkbox label {
@@ -547,6 +724,8 @@ b {
 	height: 23px;
 	min-width: 110px;
 	padding-left: 40px;
+	
+	cursor: pointer;
 }
 
 .hotels-search .checkbox label:last-child {
@@ -560,18 +739,18 @@ b {
 	left: -1px;
 	content: "";
 	background-image: url("../img/spritesheet.png");
-    background-repeat: no-repeat;
-/*    display: block;*/
+	 background-repeat: no-repeat;
+/*	 display: block;*/
 	width: 22px;
-    height: 22px;
-    background-position: -378px -2px;
+	 height: 22px;
+	 background-position: -378px -2px;
 }
 
 :checked ~ .checkbox-indicator {
 	width: 26px;
-    height: 22px;
+	 height: 22px;
 	top: -1px;
-    background-position: -404px -2px;
+	 background-position: -404px -2px;
 }
 
 .hotels-search input[type="checkbox"] {
@@ -580,19 +759,26 @@ b {
 
 .hotels-search-category:last-child {
 	float: right;
-	width: 328px;
+	width: 33%;
+	min-width: 246px;
 	margin-right: 0;
 }
 
 .price legend {
 	margin-bottom: 10px;
+	margin-left: 23px;
+/*	margin-left: 12px;*/
+}
+
+.controls {
+	margin-left: 9%;
 }
 
 .price-controls {
 	position: relative;
 	
 	box-sizing: border-box;
-	margin-left: 10px;
+/*	margin-left: 6%;*/
 	margin-bottom: 20px;
 	height: 36px;
 	
@@ -605,9 +791,11 @@ b {
 .price-controls label {
 	display: inline-block;
 	
+	box-sizing: border-box;
+	width: 50%;
 	margin: 0;
-	width: 95px;
-		
+	
+	text-align: right;
 	font-size: 14px;
 	line-height: 32px;
 	vertical-align: top;
@@ -615,24 +803,22 @@ b {
 	cursor: pointer;
 }
 
-.min-price {
-	padding-left: 65px;
-}
-
-.max-price {
-	padding-left: 52px;
-}
-
 .price-controls input {
-	width: 70px;
+	width: 50%;
 	margin: 0;
+	
+	line-height: 28px;
 	
 	background: transparent;
 	color: inherit;
-	font: inherit;
+/*	font: inherit;*/
 	border: none;
 	outline: none;
 	cursor: inherit;
+}
+
+.min-price input {
+	width: 45%;
 }
 
 .price-range {
@@ -640,15 +826,17 @@ b {
 }
 
 .price-controls::after {
+	content: "";
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(50%, -50%);
+	transform: translate(-50%, -50%);
 	
-	height: 22px;	
+	height: 22px;
+	width: 2px;
 	
 	content: "";
-	border: 1px solid #ffffff;
+	background: #ffffff;
 }
 
 .scale {
@@ -660,8 +848,8 @@ b {
 .bar {
 	position: relative;
 	
-	margin-left: 6%;
-	width: 78%;
+	margin-left: 0%;
+	width: 83%;
 	height: 2px;
 	background: #ffffff;
 }
@@ -684,7 +872,7 @@ b {
 }
 
 .range-toggle-min {
-	left: -10px;
+/*	left: -10px;*/
 }
 
 .range-toggle-max {
@@ -703,6 +891,7 @@ b {
 	color: inherit;
 	background: transparent;
 	text-transform: uppercase;
+	outline: none;
 	border: 2px solid #ffffff;
 	border-radius: 2px;
 	cursor: pointer;
@@ -792,12 +981,12 @@ b {
 }
 
 .sort-order a::before {
+	content: "";
 	display: inline-block;
 	vertical-align: bottom;
 	
 	margin-left: 14px;
 	
-	content: "";
 	border: 10px solid #cccccc;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
@@ -840,7 +1029,7 @@ a.arrow-down::before {
 	float: left;
 	
 	box-sizing: border-box;
-	max-width: 265px;
+	max-width: 270px;
 	margin-top: -5px;
 			
 /*	font-size: 0;*/
@@ -947,42 +1136,43 @@ a.arrow-down::before {
 	float: right;
 	margin: 5px 0;
 	margin-left: 3px;
-   position: relative;
-   display: block;
-   color: red;
-   width: 0px;
-   height: 0px;
-   border-right:  10px solid transparent;
-   border-bottom: 7px  solid #81b3d2;
-   border-left:   10px solid transparent;
-   transform:    rotate(35deg);
+	position: relative;
+	display: block;
+	color: red;
+	width: 0px;
+	height: 0px;
+	border-right:  10px solid transparent;
+	border-bottom: 7px  solid #81b3d2;
+	border-left:	10px solid transparent;
+	transform:	 rotate(35deg);
 }
 
-.star:before {
-   border-bottom: 8px solid #81b3d2;
-   border-left: 3px solid transparent;
-   border-right: 3px solid transparent;
-   position: absolute;
-   height: 0;
-   width: 0;
-   top: -5px;
-   left: -6px;
-   display: block;
-   content: '';
-   transform: rotate(-35deg);
+.star::before {
+	content: "";
+	border-bottom: 8px solid #81b3d2;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	position: absolute;
+	height: 0;
+	width: 0;
+	top: -5px;
+	left: -6px;
+	display: block;
+	transform: rotate(-35deg);
 }
 
-.star:after {
-   position: absolute;
-   display: block;
-   color: red;
-   top: 0px;
-   left: -10px;
-   width: 0px;
-   height: 0px;
-   border-right: 10px solid transparent;
-   border-bottom: 7px solid #81b3d2;
-   border-left: 10px solid transparent;
+.star::after {
+	content: "";
+	position: absolute;
+	display: block;
+	color: red;
+	top: 0px;
+	left: -10px;
+	width: 0px;
+	height: 0px;
+	border-right: 10px solid transparent;
+	border-bottom: 7px solid #81b3d2;
+	border-left: 10px solid transparent;
 	transform: rotate(-70deg);
 	content: '';
 }
@@ -1001,104 +1191,104 @@ a.arrow-down::before {
 
 /*Спрайт
 .sprite {
-    background-image: url(spritesheet.png);
-    background-repeat: no-repeat;
-    display: block;
+background-image: url(spritesheet.png);
+	 background-repeat: no-repeat;
+	 display: block;
 }
 
 .sprite-html-academy {
-    width: 113px;
-    height: 39px;
-    background-position: -2px -2px;
+	 width: 113px;
+	 height: 39px;
+	 background-position: -2px -2px;
 }
 
 .sprite-html-academy-active {
-    width: 113px;
-    height: 39px;
-    background-position: -119px -2px;
+	 width: 113px;
+	 height: 39px;
+	 background-position: -119px -2px;
 }
 
 .sprite-html-academy-hover {
-    width: 113px;
-    height: 39px;
-    background-position: -236px -2px;
+	 width: 113px;
+	 height: 39px;
+	 background-position: -236px -2px;
 }
 
 .sprite-icon-calendar {
-    width: 21px;
-    height: 22px;
-    background-position: -353px -2px;
+	 width: 21px;
+	 height: 22px;
+	 background-position: -353px -2px;
 }
 
 .sprite-icon-checkbox {
-    width: 22px;
-    height: 22px;
-    background-position: -378px -2px;
+	 width: 22px;
+	 height: 22px;
+	 background-position: -378px -2px;
 }
 
 .sprite-icon-checked {
-    width: 26px;
-    height: 22px;
-    background-position: -404px -2px;
+	 width: 26px;
+	 height: 22px;
+	 background-position: -404px -2px;
 }
 
 .sprite-icon-fb {
-    width: 10px;
-    height: 19px;
-    background-position: -434px -2px;
+	 width: 10px;
+	 height: 19px;
+	 background-position: -434px -2px;
 }
 
 .sprite-icon-food {
-    width: 74px;
-    height: 70px;
-    background-position: -448px -2px;
+	 width: 74px;
+	 height: 70px;
+	 background-position: -448px -2px;
 }
 
 .sprite-icon-house {
-    width: 75px;
-    height: 72px;
-    background-position: -526px -2px;
+	 width: 75px;
+	 height: 72px;
+	 background-position: -526px -2px;
 }
 
 .sprite-icon-minus {
-    width: 12px;
-    height: 3px;
-    background-position: -605px -2px;
+	 width: 12px;
+	 height: 3px;
+	 background-position: -605px -2px;
 }
 
 .sprite-icon-plus {
-    width: 11px;
-    height: 11px;
-    background-position: -621px -2px;
+	 width: 11px;
+	 height: 11px;
+	 background-position: -621px -2px;
 }
 
 .sprite-icon-souvenirs {
-    width: 64px;
-    height: 76px;
-    background-position: -636px -2px;
+	 width: 64px;
+	 height: 76px;
+	 background-position: -636px -2px;
 }
 
 .sprite-icon-stars {
-    width: 89px;
-    height: 17px;
-    background-position: -704px -2px;
+	 width: 89px;
+	 height: 17px;
+	 background-position: -704px -2px;
 }
 
 .sprite-icon-three-stars {
-    width: 65px;
-    height: 17px;
-    background-position: -797px -2px;
+	 width: 65px;
+	 height: 17px;
+	 background-position: -797px -2px;
 }
 
 .sprite-icon-tweeter {
-    width: 17px;
-    height: 15px;
-    background-position: -866px -2px;
+	 width: 17px;
+	 height: 15px;
+	 background-position: -866px -2px;
 }
 
 .sprite-icon-utube {
-    width: 20px;
-    height: 16px;
-    background-position: -887px -2px;
+	 width: 20px;
+	 height: 16px;
+	 background-position: -887px -2px;
 }
 
