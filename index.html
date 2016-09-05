@@ -25,7 +25,7 @@
 					</ul>
 					<ul class="main-navigation-right">
 						<li>
-							<a href="/catalog.html">
+							<a href="catalog.html">
 								Гостиницы
 							</a>
 						</li>
@@ -37,7 +37,7 @@
 					</ul>	
 				</nav>
 				<div class="logo">
-					<a class="index-page" href="/index.html">
+					<a class="index-page current">
 						<img src="img/logo.png" alt="City of Sedona" width="138" height="70">
 					</a>
 				</div>
@@ -116,37 +116,40 @@
 					<a href="#">
 						Поиск гостиницы в Седоне
 					</a>
-					<div class="index-search-form">
-						<form action="#" class="search-details">
-							<div class="clearfix">
-								<label class="clearfix date">Дата заезда:
-									<input type="date" value="2016-04-24" name="checkin">
+					
+					<form action="#" class="index-search-form">
+						<div class="clearfix">
+							<label class="clearfix date">Дата заезда:
+								<input type="text" value="24 апреля 2016" name="checkin">
+							</label>
+							<button name="calendar"></button>
+						</div>
+						<div class=" clearfix">
+							<label class="clearfix date">Дата выезда:
+								<input type="text" value="4 июля 2016" name="checkout">
+							</label>
+							<button name="calendar"></button>
+						</div>
+						<div class="clearfix visitors">
+							<div class="adults clearfix">
+								<label  for="adults-number">
+									Взрослые:
 								</label>
-								<button name="calendar"></button>
-							</div>
-							<div class=" clearfix">
-								<label class="clearfix date">Дата выезда:
-									<input type="date" value="2016-07-04" name="checkout">
-								</label>
-								<button name="calendar"></button>
-							</div>
-							<div class="clearfix adults">
-								<label class=" clearfix">Взрослые:
-									<input type="text" value="2" name="adults">
-								</label>
-								<button name="minus">-</button>
 								<button name="plus">+</button>
-							</div>
-							<div class="clearfix children">
-								<label class="clearfix ">Дети:
-									<input type="text" value="2" name="children">
-								</label>
+								<input id="adults-number" type="text" value="2" name="adults">					
 								<button name="minus">-</button>
-								<button name="plus">+</button>
 							</div>
-							<button type="submit">Найти</button>
-						</form>
-					</div>
+							<div class="children clearfix">
+								<label for="children-number">
+									Дети:
+								</label>
+								<button name="plus">+</button>
+								<input type="text" value="0" name="children">
+								<button name="minus">-</button>
+							</div>
+						</div>
+						<button type="submit">Найти</button>
+					</form>
 				</div>
 				<article class="background-map">
 <!-- Фоновое изображение - карта <img src="img/map.jpg" width="1200px" height="593px">-->

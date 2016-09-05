@@ -23,14 +23,15 @@ h2, .lead, .features-name {
 }
 
 b {
-/*	font-size: 30px;*/
-/*	line-height: 24px;*/
 	color: #000000;
-/*	margin-top: 0;*/
 } 
 
 a, button {
 	cursor: pointer;
+}
+
+a.current {
+	cursor: default;
 }
 
 .container {
@@ -248,12 +249,11 @@ a, button {
 .developer a {
 	display: inline-block;
 	
-	width: 114px;
-	height: 40px;
+	width: 113px;
+	height: 39px;
 	margin-top:1px;
 	margin-left: 4px;
-	padding-top: 1px;
-	padding-left: 1px;
+	padding: 0;
 	
 	font-size: 0;
 	vertical-align: middle;
@@ -262,13 +262,13 @@ a, button {
 .developer a:hover {
 	background-image: url("../img/spritesheet.png");
 	background-repeat: no-repeat;
-	background-position: -235px -1px;;
+	background-position: -236px -2px;;
 }
 
 .developer a:active {
 	background-image: url("../img/spritesheet.png");
 	background-repeat: no-repeat;
-	background-position: -118px -1px;;
+	background-position: -119px -2px;;
 }
 
 .developer img:hover {
@@ -334,7 +334,6 @@ a, button {
 	width: 33.333333%;
 	padding-left: 4%;
 	padding-right: 4%;
-/*	outline: blue solid 1px;*/
 }
 
 .features-item p {
@@ -365,9 +364,10 @@ a, button {
 }
 
 .features-single .features-item {
-	height: 256px;
+	min-height: 256px;
+	max-height: 533px;
 	padding-top: 54px;
-	padding-bottom: 30px;
+	padding-bottom: 5px;
 		
 	color: #ffffff;
 	background: #81b3d2;
@@ -386,7 +386,7 @@ a, button {
 	padding-left: 4.7%;
 	padding-right: 4.7%;
 	padding-top: 161px;
-	/*	padding-bottom: 42px;*/
+	padding-bottom: 5px;
 	min-height: 330px;
 }
 
@@ -400,8 +400,8 @@ a, button {
 	position: absolute;
 	left: 50%;
 	background-image: url(../img/spritesheet.png);
-	 background-repeat: no-repeat;
-	 display: block;
+	background-repeat: no-repeat;
+	display: block;
 	transform: translateX(-50%);
 }
 
@@ -415,8 +415,8 @@ a, button {
 .food .features-name::before {
 	top: 62px;
 	width: 74px;
-	 height: 71px;
-	 background-position: -448px -2px;
+	height: 71px;
+	background-position: -448px -2px;
 }
 
 .souvenirs .features-name::before {
@@ -446,6 +446,7 @@ a, button {
 	padding-top: 48px;
 	padding-left: 5%;
 	padding-right: 5%;
+	padding-bottom: 5px;
 }
 
 .index-search {
@@ -509,7 +510,7 @@ a, button {
 	line-height: 38px;
 }
 
-.index-search-form div {
+.index-search-form>div {
 	position: relative;
 	margin-bottom: 29px;
 }
@@ -526,6 +527,9 @@ a, button {
 	float: right;
 	height: 38px;
 	box-sizing: border-box;
+	
+	font-size: 14px;
+	text-transform: uppercase;
 	
 	outline: none;
 	border: none;
@@ -575,7 +579,7 @@ a, button {
 
 .index-search-form input[name="children"],
 .index-search-form input[name="adults"] {
-	width: 114px;
+	width: 38px;
 
 	text-align: center;
 }
@@ -590,53 +594,65 @@ a, button {
 	width: 180px;
 }
 
+.visitors label {
+	width: auto;
+}
+
+.visitors button {
+	float: right;
+}
+
 .index-search-form button[name="plus"],
 .index-search-form button[name="minus"] {
-	position: absolute;
-	
+	position: relative;
+	width: 38px;
+	height: 38px;
+	padding: 0;
+		
 	font-size: 0;
 	
 	border: none;
 	outline: none;
-	background: url(../img/spritesheet.png);
+	background: #f2f2f2;
 }
 
-.index-search-form button[name="plus"] {
-	top: 50%;
-	right: 13px;
-	transform: translateY(-50%);
+.index-search-form button[name="plus"]::before,
+.index-search-form button[name="minus"]::before {
+	content: "";
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	
-	width: 13px;
-	height: 13px;
+	width: 11px;
+	height: 3px;
 	
-	background-position: -620px -1px;
+	background: #a9a9a9;
 }
 
-.index-search-form button[name="plus"]:hover {
-	background-position: -620px -27px;
-}
-
-.index-search-form button[name="plus"]:active {
-	background-position: -620px -14px;
-}
-
-.index-search-form button[name="minus"] {
-	top: 50%;
-	right: 88px;
-	transform: translateY(-50%);
+.index-search-form button[name="plus"]::after {
+	content: "";
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	
-	width: 13px;
-	height: 5px;
+	width: 3px;
+	height: 11px;
 	
-	background-position: -605px -1px;
+	background: #a9a9a9;
 }
 
-.index-search-form button[name="minus"]:hover {
-	background-position: -605px -11px;
+.index-search-form button[name="minus"]:hover::before,
+.index-search-form button[name="plus"]:hover::before,
+.index-search-form button[name="plus"]:hover::after {
+	background: #000000;
 }
 
-.index-search-form button[name="minus"]:active {
-	background-position: -605px -6px;
+.index-search-form button[name="minus"]:active::before,
+.index-search-form button[name="plus"]:active::before,
+.index-search-form button[name="plus"]:active::after {
+	background: #81b3d2;
 }
 
 .index-search-form button[type="submit"] {
@@ -668,8 +684,8 @@ a, button {
 	height: 593px;
 	background: #cbdda9 url("../img/bg-map.jpg") no-repeat;
 	margin-bottom: -120px;
-/*	outline: blue solid 1px;*/
 }
+
 
 /*Стили для catalog.html*/
 .hotels-search {
@@ -737,20 +753,18 @@ a, button {
 	
 	top: -1px;
 	left: -1px;
-	content: "";
 	background-image: url("../img/spritesheet.png");
-	 background-repeat: no-repeat;
-/*	 display: block;*/
+	background-repeat: no-repeat;
 	width: 22px;
-	 height: 22px;
-	 background-position: -378px -2px;
+	height: 22px;
+	background-position: -378px -2px;
 }
 
-:checked ~ .checkbox-indicator {
+.hotels-search :checked ~ .checkbox-indicator {
 	width: 26px;
-	 height: 22px;
+	height: 22px;
 	top: -1px;
-	 background-position: -404px -2px;
+	background-position: -404px -2px;
 }
 
 .hotels-search input[type="checkbox"] {
@@ -767,7 +781,6 @@ a, button {
 .price legend {
 	margin-bottom: 10px;
 	margin-left: 23px;
-/*	margin-left: 12px;*/
 }
 
 .controls {
@@ -778,7 +791,6 @@ a, button {
 	position: relative;
 	
 	box-sizing: border-box;
-/*	margin-left: 6%;*/
 	margin-bottom: 20px;
 	height: 36px;
 	
@@ -904,10 +916,8 @@ a, button {
 
 .search-results-header, 
 .hotels-item {
-/*	box-sizing: border-box;*/
 	padding: 30px 6%;
 	border-bottom: 1px solid #e5e5e5;
-/*	box-shadow:  0 1px #e5e5e5;*/
 }
 
 .search-results-header h2 {
@@ -915,14 +925,13 @@ a, button {
 	width: 135px;
 	margin: 0;
 	margin-right: 30px;
-/*	outline: blue solid 1px;*/
 }
 
 .search-results-header .sort {
 	float: left;
-	/*	margin-right: 40px;*/
+	max-width: 75%;
 	margin-top: 7px;
-	
+		
 	font-size: 0px;
 	line-height: 15px;
 }
@@ -938,12 +947,11 @@ a, button {
 }
 
 .search-results-header ul {
+	max-width: 75%;
 	margin: 0;
-/*	margin-left: 40px;*/
 	padding: 0;
 	
 	list-style: none;
-/*	outline: blue solid 1px;*/
 }
 
 .sort li {
@@ -1031,9 +1039,6 @@ a.arrow-down::before {
 	box-sizing: border-box;
 	max-width: 270px;
 	margin-top: -5px;
-			
-/*	font-size: 0;*/
-/*	outline: blue solid 1px;*/
 }
 
 .hotel-review .hotel-name {
@@ -1125,7 +1130,6 @@ a.arrow-down::before {
 
 .hotel-level {
 	float: right;
-/*	outline: blue solid 1px;*/
 }
 
 .hotel-level .stars {
@@ -1164,23 +1168,24 @@ a.arrow-down::before {
 .star::after {
 	content: "";
 	position: absolute;
-	display: block;
-	color: red;
 	top: 0px;
 	left: -10px;
+	
+	display: block;
 	width: 0px;
 	height: 0px;
+	
+	color: red;
 	border-right: 10px solid transparent;
 	border-bottom: 7px solid #81b3d2;
 	border-left: 10px solid transparent;
 	transform: rotate(-70deg);
-	content: '';
 }
 
 .hotel-level .rating {
-	margin-top: 63px;
 	width: 110px;
 	height: 27px;
+	margin-top: 63px;
 	
 	text-align: center;
 	line-height: 27px;
