@@ -479,7 +479,6 @@ a.current {
 	width: 100%;
 	padding-top: 30px;
 	padding-bottom: 30px;
-/*	height: 85px;*/
 	
 	text-align: center;
 	font-size: 21px;
@@ -488,34 +487,36 @@ a.current {
 	text-decoration: none;
 	color: #ffffff;	
 	background: #766357;
-/*	margin-top: 47px;*/
-/*	outline: blue solid 1px;*/
 }
 
-.index-search-form {
-/*	display: none;*/
+.index-popup {
 	position: absolute;
 	z-index: 2;
+	
+	display: none;
 	box-sizing: border-box;
 	width: 568px;
-/*	height: 400px;*/
 	margin: 0 auto;
 	padding: 55px;
 	background: #ffffff;
 	box-shadow: 0 7px 15px rgba(0,1,1,0.15);
-/*	outline: blue solid 1px;*/
 	
 	font-size: 0;
 	font-weight: bold;
 	line-height: 38px;
+	
 }
 
-.index-search-form>div {
+.index-popup-show {
+	display: block;
+}
+
+.index-popup>div {
 	position: relative;
 	margin-bottom: 29px;
 }
 
-.index-search-form label {
+.index-popup label {
 	float: left;
 	width: 100%;
 	
@@ -523,7 +524,7 @@ a.current {
 	text-align: left;
 }
 
-.index-search-form input {
+.index-popup input {
 	float: right;
 	height: 38px;
 	box-sizing: border-box;
@@ -536,7 +537,7 @@ a.current {
 	background: #f2f2f2;
 }
 
-.index-search-form button[name="calendar"] {
+.index-popup button[name="calendar"] {
 	position: absolute;
 	top: 8px;
 	right: 9px;
@@ -550,46 +551,46 @@ a.current {
 	background-position: -353px -2px;
 }
 
-.index-search-form button[name="calendar"]:hover {
+.index-popup button[name="calendar"]:hover {
 	background-position: -353px -51px;
 }
 
-.index-search-form button[name="calendar"]:active {
+.index-popup button[name="calendar"]:active {
 	background-position: -353px -26px;
 }
 
-.index-search-form input[name="checkin"],
-.index-search-form input[name="checkout"] {
+.index-popup input[name="checkin"],
+.index-popup input[name="checkout"] {
 	width: 346px;
 	
 	padding-left: 15px;
 	padding-right: 10px;
 }
 
-.index-search-form input[name="checkin"]:hover,
-.index-search-form input[name="checkout"]:hover {
+.index-popup input[name="checkin"]:hover,
+.index-popup input[name="checkout"]:hover {
 	background: #ebebeb;
 }
 
-.index-search-form input[name="checkin"]:focus,
-.index-search-form input[name="checkout"]:focus {
+.index-popup input[name="checkin"]:focus,
+.index-popup input[name="checkout"]:focus {
 	background: #ffffff;
 	border: 2px solid #e5e5e5;
 }
 
-.index-search-form input[name="children"],
-.index-search-form input[name="adults"] {
+.index-popup input[name="children"],
+.index-popup input[name="adults"] {
 	width: 38px;
 
 	text-align: center;
 }
 
-.index-search-form .adults {
+.index-popup .adults {
 	float: left;
 	width: 227px;
 }
 
-.index-search-form .children {
+.index-popup .children {
 	float: right;
 	width: 180px;
 }
@@ -602,8 +603,8 @@ a.current {
 	float: right;
 }
 
-.index-search-form button[name="plus"],
-.index-search-form button[name="minus"] {
+.index-popup button[name="plus"],
+.index-popup button[name="minus"] {
 	position: relative;
 	width: 38px;
 	height: 38px;
@@ -616,8 +617,8 @@ a.current {
 	background: #f2f2f2;
 }
 
-.index-search-form button[name="plus"]::before,
-.index-search-form button[name="minus"]::before {
+.index-popup button[name="plus"]::before,
+.index-popup button[name="minus"]::before {
 	content: "";
 	position: absolute;
 	top:50%;
@@ -630,7 +631,7 @@ a.current {
 	background: #a9a9a9;
 }
 
-.index-search-form button[name="plus"]::after {
+.index-popup button[name="plus"]::after {
 	content: "";
 	position: absolute;
 	top:50%;
@@ -643,19 +644,19 @@ a.current {
 	background: #a9a9a9;
 }
 
-.index-search-form button[name="minus"]:hover::before,
-.index-search-form button[name="plus"]:hover::before,
-.index-search-form button[name="plus"]:hover::after {
+.index-popup button[name="minus"]:hover::before,
+.index-popup button[name="plus"]:hover::before,
+.index-popup button[name="plus"]:hover::after {
 	background: #000000;
 }
 
-.index-search-form button[name="minus"]:active::before,
-.index-search-form button[name="plus"]:active::before,
-.index-search-form button[name="plus"]:active::after {
+.index-popup button[name="minus"]:active::before,
+.index-popup button[name="plus"]:active::before,
+.index-popup button[name="plus"]:active::after {
 	background: #81b3d2;
 }
 
-.index-search-form button[type="submit"] {
+.index-popup button[type="submit"] {
 	width: 458px;
 	height: 58px;
 	margin-top: 26px;
@@ -670,11 +671,11 @@ a.current {
 	outline: none;
 }
 
-.index-search-form button[type="submit"]:hover {
+.index-popup button[type="submit"]:hover {
 	background: #669ec0;
 }
 
-.index-search-form button[type="submit"]:active {
+.index-popup button[type="submit"]:active {
 	background: #5496bd;
 	color: rgba(255, 255, 255, 0.3);
 }
