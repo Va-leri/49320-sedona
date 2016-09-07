@@ -7,6 +7,5 @@ link.addEventListener("click",
 	function (event) {
 		event.preventDefault();
 		popup.classList.toggle("index-popup-show");
-		console.log("Клик по ссылке вход");
 		checkin.focus();
 	});

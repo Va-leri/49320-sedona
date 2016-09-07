@@ -213,16 +213,16 @@ a.current {
 
 .social-btn-fb::after {
 	width: 10px;
-	 height: 19px;
-	 background-position: -434px -2px;
+	height: 19px;
+	background-position: -434px -2px;
 	margin-left: -5px;
 	margin-top: -11px;
 }
 
-.social-btn-utube::after {
+.social-btn-youtube::after {
 	width: 20px;
-	 height: 16px;
-	 background-position: -887px -2px;
+	height: 16px;
+	background-position: -887px -2px;
 	margin-left: -10px;
 	margin-top: -8px;
 }
@@ -454,6 +454,8 @@ a.current {
 	width: 568px;
 	margin: 0 auto;
 	padding-top: 26px;
+	
+	background: inherit;
 }
 
 .index-search p.index-search-heading {
@@ -475,6 +477,9 @@ a.current {
 }
 
 .index-search a {
+	position: relative;
+	z-index: 3;
+	
 	display: block;
 	width: 100%;
 	padding-top: 30px;
@@ -509,6 +514,17 @@ a.current {
 
 .index-popup-show {
 	display: block;
+	animation: drive 0.6s;
+	transform-origin: 50% 0%;
+}
+
+@keyframes drive {
+	0% {
+		opacity: 0; transform: translateY(-150px);
+	}
+	100% {
+		opacity: 1; transform: translateY(0);
+	}
 }
 
 .index-popup>div {
@@ -687,6 +703,10 @@ a.current {
 	margin-bottom: -120px;
 }
 
+iframe {
+	width: 100%;
+	height: 593px;
+}
 
 /*Стили для catalog.html*/
 .hotels-search {
@@ -733,7 +753,7 @@ a.current {
 	min-height: 156px;
 }
 
-.hotels-search .checkbox label {
+.checkbox label {
 	position: relative;
 	
 	display: block;
@@ -745,7 +765,7 @@ a.current {
 	cursor: pointer;
 }
 
-.hotels-search .checkbox label:last-child {
+.checkbox label:last-child {
 	margin-bottom: 0;
 }
 
@@ -761,7 +781,7 @@ a.current {
 	background-position: -378px -2px;
 }
 
-.hotels-search :checked ~ .checkbox-indicator {
+:checked ~ .checkbox-indicator {
 	width: 26px;
 	height: 22px;
 	top: -1px;
@@ -1138,31 +1158,36 @@ a.arrow-down::before {
 }
 
 .star {
+	position: relative;
+	
 	float: right;
 	margin: 5px 0;
 	margin-left: 3px;
-	position: relative;
 	display: block;
-	color: red;
 	width: 0px;
 	height: 0px;
+	
 	border-right:  10px solid transparent;
 	border-bottom: 7px  solid #81b3d2;
 	border-left:	10px solid transparent;
+	
 	transform:	 rotate(35deg);
 }
 
 .star::before {
 	content: "";
+	position: absolute;
+	top: -5px;
+	left: -6px;
+	
+	display: block;
+	height: 0;
+	width: 0;
+	
 	border-bottom: 8px solid #81b3d2;
 	border-left: 3px solid transparent;
 	border-right: 3px solid transparent;
-	position: absolute;
-	height: 0;
-	width: 0;
-	top: -5px;
-	left: -6px;
-	display: block;
+		
 	transform: rotate(-35deg);
 }
 
@@ -1176,7 +1201,6 @@ a.arrow-down::before {
 	width: 0px;
 	height: 0px;
 	
-	color: red;
 	border-right: 10px solid transparent;
 	border-bottom: 7px solid #81b3d2;
 	border-left: 10px solid transparent;
@@ -1292,7 +1316,7 @@ background-image: url(spritesheet.png);
 	 background-position: -866px -2px;
 }
 
-.sprite-icon-utube {
+.sprite-icon-youtube {
 	 width: 20px;
 	 height: 16px;
 	 background-position: -887px -2px;
